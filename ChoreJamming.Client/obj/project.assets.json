@@ -3481,35 +3481,42 @@
     ]
   },
   "packageFolders": {
-    "/Users/plate/.nuget/packages/": {}
+    "C:\\Users\\awind\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Client/ChoreJamming.Client.csproj",
+      "projectUniqueName": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Client\\ChoreJamming.Client.csproj",
       "projectName": "ChoreJamming.Client",
-      "projectPath": "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Client/ChoreJamming.Client.csproj",
-      "packagesPath": "/Users/plate/.nuget/packages/",
-      "outputPath": "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Client/obj/",
+      "projectPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Client\\ChoreJamming.Client.csproj",
+      "packagesPath": "C:\\Users\\awind\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Client\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/plate/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\awind\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Application/ChoreJamming.Application.csproj": {
-              "projectPath": "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Application/ChoreJamming.Application.csproj"
+            "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Application\\ChoreJamming.Application.csproj": {
+              "projectPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Application\\ChoreJamming.Application.csproj"
             },
-            "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Infrastructure/ChoreJamming.Infrastructure.csproj": {
-              "projectPath": "/Users/plate/RiderProjects/ChoreJamming/ChoreJamming.Infrastructure/ChoreJamming.Infrastructure.csproj"
+            "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Infrastructure\\ChoreJamming.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Infrastructure\\ChoreJamming.Infrastructure.csproj"
             }
           }
         }
@@ -3554,11 +3561,15 @@
             "version": "[9.0.11, 9.0.11]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "name": "Microsoft.NETCore.App.Host.win-x64",
             "version": "[9.0.11, 9.0.11]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[9.0.11, 9.0.11]"
           }
         ],
@@ -3570,7 +3581,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
