@@ -23,7 +23,10 @@
         <div class="card-body">
             <h5 class="card-title">@currentSong.Title</h5>
             <h6 class="card-subtitle mb-2 text-muted">@currentSong.Artist</h6>
-            <iframe width="100%" height="200" src="@GetEmbedUrl(currentSong.VideoUrl)" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="200" type="audio/mp4" src="@GetEmbedUrl(currentSong.VideoUrl)" frameborder="0" allowfullscreen></iframe>
+            @*<audio>
+                <source src="@GetEmbedUrl(currentSong.VideoUrl)" type="audio/mp4"/>
+            </audio>*@
         </div>
     </div>
 }
@@ -31,6 +34,28 @@ else if (hasSearched)
 {
     <div class="alert alert-warning">
         Could not find a song named "<strong>@choreInput</strong>". Try a famous song title!
+    </div>
+}
+@*TODO:
+    [ ] - Add a Min and Max Validator (1 - 5)
+    [ ] - Database Migration Update
+    [ ] - Add formatter for the Date Feild.
+    [ ] - Add a ratting UI compnent.
+    
+
+*@
+@if (history.Count > 0)
+{
+    <div>
+        @foreach (var song in history)
+        {
+            <div class="card-body">
+                <h5 class="card-title">@song.SongTitle</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@song.ChoreName</h6>
+                <p>Release Data: @song.Date</p>
+                <p>Rating: @song.Rating</p>
+            </div>
+        }
     </div>
 }
 
@@ -52,6 +77,17 @@ else if (hasSearched)
             hasSearched = false;
             currentSong = await ChoreService.ProcessChoreAsync(choreInput);
             hasSearched = true;
+        }
+
+        if (currentSong != null)
+        {
+            history.Add(new ChoreHistory
+            {
+                ChoreName = currentSong.Artist,
+                SongTitle = currentSong.Title,
+                Date = currentSong.ReleaseDate,
+                Rating = 0
+            });
         }
     }
     private string GetEmbedUrl(string url)
