@@ -38,7 +38,15 @@ public class AudioDbService : IMusicProvider
                 Artist = item["artistName"]?.ToString() ?? "Unknown",
                 Album = item["collectionName"]?.ToString() ?? "Single",
                 VideoUrl = item["previewUrl"]?.ToString() ?? "",
-                ThumbnailUrl = item["artworkUrl100"]?.ToString().Replace("100x100", "600x600") ?? ""
+                ThumbnailUrl = item["artworkUrl100"]?.ToString().Replace("100x100", "600x600") ?? "",
+               
+                // TODO add Genre and ReleaseYear
+                
+                Genre = item["primaryGenreName"]?.ToString() ?? "Unknown",
+
+                ReleaseYear = item["releaseDate"] != null
+                    ? DateTime.Parse(item["releaseDate"]!.ToString()).Year
+                    : (int?)null
             };
         }
         catch
