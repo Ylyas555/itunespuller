@@ -1,0 +1,74 @@
+﻿## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## VS Code
+.vscode/
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+!appsettings.json
+
+## Environment / secrets
+.env
+.env.*
+secrets.json
+
+## Publish output
+publish/
+wwwroot/lib/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/packages/
+.nuget/nuget.exe
+
+## Dotnet tools
+.dotnet/
+
+## Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+## OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Logs
+*.log
+
+## Backup & temp files
+*.bak
+*.tmp
+*.temp
+*.old
+
+## EF Core
+Migrations/*.Designer.cs
+Migrations/*.resx
+
+## Azure / deployment
+.azure/
+serviceDependencies.json
+serviceDependencies.*.json
