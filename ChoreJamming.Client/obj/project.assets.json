@@ -3481,23 +3481,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\awind\\.nuget\\packages\\": {},
+    "C:\\Users\\Luke\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Client\\ChoreJamming.Client.csproj",
+      "projectUniqueName": "C:\\advance C#\\itunespuller\\ChoreJamming.Client\\ChoreJamming.Client.csproj",
       "projectName": "ChoreJamming.Client",
-      "projectPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Client\\ChoreJamming.Client.csproj",
-      "packagesPath": "C:\\Users\\awind\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Client\\obj\\",
+      "projectPath": "C:\\advance C#\\itunespuller\\ChoreJamming.Client\\ChoreJamming.Client.csproj",
+      "packagesPath": "C:\\Users\\Luke\\.nuget\\packages\\",
+      "outputPath": "C:\\advance C#\\itunespuller\\ChoreJamming.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\awind\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Luke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\MicroFocus.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
       ],
@@ -3505,18 +3505,18 @@
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Micro Focus\\Visual COBOL\\NuGetPackages": {},
+        "C:\\Program Files (x86)\\NuGetPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Application\\ChoreJamming.Application.csproj": {
-              "projectPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Application\\ChoreJamming.Application.csproj"
+            "C:\\advance C#\\itunespuller\\ChoreJamming.Application\\ChoreJamming.Application.csproj": {
+              "projectPath": "C:\\advance C#\\itunespuller\\ChoreJamming.Application\\ChoreJamming.Application.csproj"
             },
-            "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Infrastructure\\ChoreJamming.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\awind\\Documents\\School\\Advance C#\\itunespuller\\ChoreJamming.Infrastructure\\ChoreJamming.Infrastructure.csproj"
+            "C:\\advance C#\\itunespuller\\ChoreJamming.Infrastructure\\ChoreJamming.Infrastructure.csproj": {
+              "projectPath": "C:\\advance C#\\itunespuller\\ChoreJamming.Infrastructure\\ChoreJamming.Infrastructure.csproj"
             }
           }
         }
@@ -3531,7 +3531,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -3555,24 +3555,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3581,7 +3563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
