@@ -9,4 +9,5 @@ public class Song
     public string VideoUrl { get; set; } = string.Empty; 
     
     public string ThumbnailUrl { get; set; } = string.Empty;
+    public DateTime ReleaseDate { get; set; }
 }

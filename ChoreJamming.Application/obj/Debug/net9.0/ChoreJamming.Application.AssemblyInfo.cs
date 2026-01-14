@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChoreJamming.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94b2679374c6c9760ecd07e104c8bf2e7916c1ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ed2213408aea317f37b379d1265fcaca82d995e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChoreJamming.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChoreJamming.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
