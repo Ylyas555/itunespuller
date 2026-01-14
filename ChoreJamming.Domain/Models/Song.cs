@@ -9,4 +9,8 @@ public class Song
     public string VideoUrl { get; set; } = string.Empty; 
     
     public string ThumbnailUrl { get; set; } = string.Empty;
+    // update to include genre and release year
+    public string Genre { get; set; } = string.Empty;
+    
+    public int? ReleaseYear { get; set; }
 }
