@@ -6,6 +6,8 @@ namespace ChoreJamming.Infrastructure.Services;
 
 public class AudioDbService : IMusicProvider
 {
+    private static readonly Random _random = new();
+
     private readonly HttpClient _http;
 
     public AudioDbService(HttpClient http)
@@ -15,7 +17,10 @@ public class AudioDbService : IMusicProvider
 
     public async Task<Song?> GetSongAsync(string query)
     {
-        var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=1";
+// TODO        
+        var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=10";
+
+       // var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=1";
 
         try 
         {
@@ -30,8 +35,10 @@ public class AudioDbService : IMusicProvider
             var results = json["results"];
 
             if (results == null || !results.HasValues) return null;
+// TODO
+            // var item = results[0];
+            var item = results[_random.Next(results.Count())];
 
-            var item = results[0];
             return new Song
             {
                 Title = item["trackName"]?.ToString() ?? "Unknown",

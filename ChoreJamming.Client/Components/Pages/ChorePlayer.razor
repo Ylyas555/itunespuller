@@ -37,10 +37,11 @@
                 </p>
             }
             <!--// add audio controls--> 
-            <audio controls class="w-100">
-                <source src="@currentSong.VideoUrl" type="audio/mpeg"/>
+            <audio controls class="w-100" @key="currentSong.VideoUrl">
+                <source src="@currentSong.VideoUrl" type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
+
         </div>
     </div>
 }
@@ -61,16 +62,21 @@ else if (hasSearched)
     {
         history = await ChoreService.GetHistoryAsync();
     }
-
+// State has changed -------------------------------------------------------------------
     private async Task FindSong()
     {
-        if (!string.IsNullOrWhiteSpace(choreInput))
-        {
-            hasSearched = false;
-            currentSong = await ChoreService.ProcessChoreAsync(choreInput);
-            hasSearched = true;
-        }
+        if (string.IsNullOrWhiteSpace(choreInput))
+            return;
+
+        hasSearched = false;
+
+        currentSong = null;             
+        StateHasChanged();               //  force re-render
+
+        currentSong = await ChoreService.ProcessChoreAsync(choreInput);
+        hasSearched = true;
     }
+// -------------------------------------------------------------------------------------------
     private string GetEmbedUrl(string url)
     {
         if (string.IsNullOrEmpty(url)) return "";
