@@ -13,9 +13,9 @@ public class AudioDbService : IMusicProvider
         _http = http;
     }
 
-    public async Task<Song?> GetSongAsync(string query)
+    public async Task<List<Song>?> GetSongsAsync(string query)
     {
-        var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=1";
+        var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=1o";
 
         try 
         {
@@ -31,15 +31,19 @@ public class AudioDbService : IMusicProvider
 
             if (results == null || !results.HasValues) return null;
 
-            var item = results[0];
-            return new Song
+            var songs = new List<Song>();
+            foreach (var item in results)
             {
-                Title = item["trackName"]?.ToString() ?? "Unknown",
-                Artist = item["artistName"]?.ToString() ?? "Unknown",
-                Album = item["collectionName"]?.ToString() ?? "Single",
-                VideoUrl = item["previewUrl"]?.ToString() ?? "",
-                ThumbnailUrl = item["artworkUrl100"]?.ToString().Replace("100x100", "600x600") ?? ""
-            };
+                songs.Add(new Song
+                {
+                    Title = item["trackName"]?.ToString() ?? "Unknown",
+                    Artist = item["artistName"]?.ToString() ?? "Unknown",
+                    Album = item["collectionName"]?.ToString() ?? "Single",
+                    VideoUrl = item["previewUrl"]?.ToString() ?? "",
+                    ThumbnailUrl = item["artworkUrl100"]?.ToString().Replace("100x100", "600x600") ?? ""
+                });
+            }
+            return songs;
         }
         catch
         {
