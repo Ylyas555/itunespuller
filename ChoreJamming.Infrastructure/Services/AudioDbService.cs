@@ -15,12 +15,9 @@ public class AudioDbService : IMusicProvider
         _http = http;
     }
 
-    public async Task<Song?> GetSongAsync(string query)
+    public async Task<List<Song>?> GetSongsAsync(string query)
     {
-// TODO        
         var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=10";
-
-       // var url = $"https://itunes.apple.com/search?term={query}&entity=song&limit=1";
 
         try 
         {
@@ -39,22 +36,23 @@ public class AudioDbService : IMusicProvider
             // var item = results[0];
             var item = results[_random.Next(results.Count())];
 
-            return new Song
+            var songs = new List<Song>();
+            foreach (var item in results)
             {
-                Title = item["trackName"]?.ToString() ?? "Unknown",
-                Artist = item["artistName"]?.ToString() ?? "Unknown",
-                Album = item["collectionName"]?.ToString() ?? "Single",
-                VideoUrl = item["previewUrl"]?.ToString() ?? "",
-                ThumbnailUrl = item["artworkUrl100"]?.ToString().Replace("100x100", "600x600") ?? "",
-               
-                // TODO add Genre and ReleaseYear
-                
-                Genre = item["primaryGenreName"]?.ToString() ?? "Unknown",
-
-                ReleaseYear = item["releaseDate"] != null
-                    ? DateTime.Parse(item["releaseDate"]!.ToString()).Year
-                    : (int?)null
-            };
+                songs.Add(new Song
+                {
+                    Title = item["trackName"]?.ToString() ?? "Unknown",
+                    Artist = item["artistName"]?.ToString() ?? "Unknown",
+                    Album = item["collectionName"]?.ToString() ?? "Single",
+                    VideoUrl = item["previewUrl"]?.ToString() ?? "",
+                    ThumbnailUrl = item["artworkUrl100"]?.ToString().Replace("100x100", "600x600") ?? "",
+                    Genre = item["primaryGenreName"]?.ToString() ?? "Unknown",
+                    ReleaseYear = item["releaseDate"] != null
+                        ? DateTime.Parse(item["releaseDate"]!.ToString()).Year
+                        : (int?)null
+                });
+            }
+            return songs;
         }
         catch
         {

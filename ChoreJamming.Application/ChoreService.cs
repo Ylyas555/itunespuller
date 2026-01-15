@@ -5,6 +5,8 @@ public class ChoreService
 {
     private readonly IMusicProvider _music;
     private readonly IRepository<ChoreHistory> _repo;
+    private readonly Random random = new Random();
+    public List<Song>? Songs {get;set;} = new List<Song>();
 
     public ChoreService(IMusicProvider music, IRepository<ChoreHistory> repo)
     {
@@ -14,18 +16,20 @@ public class ChoreService
 
     public async Task<Song?> ProcessChoreAsync(string choreName)
     {
-        var song = await _music.GetSongAsync(choreName);
-        if (song != null)
+        Songs = await _music.GetSongsAsync(choreName);
+        if (Songs == null)
         {
-            var history = new ChoreHistory 
-            { 
-                ChoreName = choreName, 
-                SongTitle = song.Title,
-                Date = DateTime.Now
-            };
-            await _repo.AddAsync(history);
-            await _repo.SaveChangesAsync();
+            return null;
         }
+        var song = Songs[random.Next(Songs.Count)];
+        var history = new ChoreHistory 
+        { 
+            ChoreName = choreName, 
+            SongTitle = song.Title,
+            Date = DateTime.Now
+        };
+        await _repo.AddAsync(history);
+        await _repo.SaveChangesAsync();
         return song;
     }
     
