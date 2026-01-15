@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChoreJamming.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52c3147a4f47723fbcc0fde349b4d6c1000cd641")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7b6049a4b638a217e0450692522abecee602a55")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChoreJamming.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChoreJamming.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

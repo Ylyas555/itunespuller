@@ -29,3 +29,5 @@ C:\Users\awind\Documents\School\Advance C#\itunespuller\ChoreJamming.Infrastruct
 C:\Users\awind\Documents\School\Advance C#\itunespuller\ChoreJamming.Infrastructure\obj\Debug\net9.0\refint\ChoreJamming.Infrastructure.dll
 C:\Users\awind\Documents\School\Advance C#\itunespuller\ChoreJamming.Infrastructure\obj\Debug\net9.0\ChoreJamming.Infrastructure.pdb
 C:\Users\awind\Documents\School\Advance C#\itunespuller\ChoreJamming.Infrastructure\obj\Debug\net9.0\ref\ChoreJamming.Infrastructure.dll
+C:\Users\awind\Documents\School\Advance C#\itunespuller\ChoreJamming.Infrastructure\bin\Debug\net9.0\ChoreJamming.Infrastructure.runtimeconfig.json
+C:\Users\awind\Documents\School\Advance C#\itunespuller\ChoreJamming.Infrastructure\obj\Debug\net9.0\ChoreJamming.Infrastructure.genruntimeconfig.cache

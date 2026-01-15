@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ChoreJamming.Infrastructure.Migrations
 {
     [DbContext(typeof(ChoreDbContext))]
-    [Migration("20260107163819_InitialCreate")]
+    [Migration("20260114184809_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -28,13 +28,21 @@ namespace ChoreJamming.Infrastructure.Migrations
 
                     b.Property<string>("ChoreName")
                         .IsRequired()
+                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Rating")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(5)
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(0);
+
                     b.Property<string>("SongTitle")
                         .IsRequired()
+                        .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

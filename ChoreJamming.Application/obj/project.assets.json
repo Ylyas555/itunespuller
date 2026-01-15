@@ -620,6 +620,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "ChoreJamming.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.11",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.11",
           "Microsoft.Extensions.Http": "9.0.11",
           "Newtonsoft.Json": "13.0.4"

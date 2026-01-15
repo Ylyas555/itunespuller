@@ -17,8 +17,9 @@ namespace ChoreJamming.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ChoreName = table.Column<string>(type: "TEXT", nullable: false),
-                    SongTitle = table.Column<string>(type: "TEXT", nullable: false),
+                    ChoreName = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    SongTitle = table.Column<string>(type: "TEXT", maxLength: 128, nullable: false),
+                    Rating = table.Column<int>(type: "INTEGER", maxLength: 5, nullable: false, defaultValue: 0),
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
